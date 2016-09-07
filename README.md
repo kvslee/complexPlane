@@ -1,18 +1,19 @@
-# CS510 CW 1
+# CS510 CW 2
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-01-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-01-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-02-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-02-YOURNAME)
 
-**Due date:** 2016/09/06
+**Due date:** 2016/09/13
 
 ## Specification
 
 Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
-1. In SageCloud, create a LaTeX file ```testlatex.tex``` (using the template in the ```info``` repository). In this file write an explanation of what the definition of the derivative $f'(x)$ of a function $f(x)$ means.  Include both inline and numbered equations, as well as a proper title, abstract, and section headings. Find a suitable image to illustrate your definition online, and include it as a figure, with proper citation of the source. After ensuring that your LaTeX file compiles properly to pdf, commit only the source file ```testlatex.tex``` to GitHub in this repository.
-1. In SageCloud, create a python file ```testpython.py```. In this file write only a single function ```test_trivial()``` that contains only the line ```assert True```. Commit this python file to GitHub in this repository and ensure that the Travis tests detect it and report a passing status. You will need to edit the links in this README file and commit the changes to GitHub to see the Travis status image.
-1. In SageCloud, create a Sage Math Worksheet ```testsage.sagews```. Explore the menus to see what it can do, and demonstrate a few neat examples that you like. Give the document a properly formatted header and sections, as well as some text describing what you chose and why. Commit the file to GitHub in this repository.
+1. Using vim, write a bash program ```helloworld.sh``` that simply prints "Hello world." (with a new line at the end) to the screen, and properly exits with the success code of 0. Make sure the top line of the program is the proper script line ```#!/bin/bash``` and make sure you change the permissions of the script to be executable. Verify that you can run the program as ```./helloworld.sh```. Commit this script to GitHub.
+1. Using vim, write a bash program ```createfiles.sh``` that creates a directory ```tmpfiles``` in the working directory, then creates 100 files named ```file001.tmp``` to ```file100.tmp``` in that directory. After the files are created, append the line ```Temporary file XXX``` to each one, where "XXX" is the number in the filename. Exit with code 0 at the end of the script. Make sure the top line of the program is the proper bash script header ```#!/bin/bash``` and that you comment your code appropriately. Make the script executable and verify that you can run the program as ```./createfiles.sh```. Commit the script to GitHub.
+1. Using vim, write a bash program ```countup.sh``` that takes one command line argument, checks whether this argument n is a positive integer (exiting with code 1 if not), then prints the sequence of space-separated positive integers "1 2 3 4 ... n" ending with the chosen number. Make the script executable in the same way as the previous exercises and verify that it works. Commit the script to GitHub.
+1. Create a python file ```test_bash.py``` that imports the module ```subprocess```. In a python funtion ```test_helloworld()```, use the function call ```subprocess.check_output("./helloworld.sh")``` to run the helloworld script and capture its output as a string. Use the ```assert``` command to compare this output to the expected output of the script. Commit the python file and verify that Travis-ci properly runs this test.
 
 ## Assessment
 
