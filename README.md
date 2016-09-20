@@ -1,29 +1,25 @@
-# CS510 CW 3
+# CS510 CW 4
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-03-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-03-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-04-YOURNAME)
 
-**Due date:** 2016/09/20
+**Due date:** 2016/09/27
 
 ## Specification
 
 Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
-1. Create a python file ```sequences.py``` with a function ```fibonacci(n)``` that returns the first ```n``` Fibonacci numbers in a list. (Recall that each successive Fibonacci number is defined by summing the previous two, starting with the numbers 1 and 1.) Commit to GitHub.
-    * Hint: Use the python template file in the info repository to make sure you have the correct structure. You should have a #! line at the top, a module docstring, function definitions, function docstrings, and informative comments in your code.
-    * Example: ```fibonacci(5)``` should return ```[1,1,2,3,5]``` 
-    * Example: the last element of ```fibonacci(1000)``` should be: 43466557686937456435688527675040625802564660517371780402481729089536555417949051890403879840079255169295922593080322634775209689623239873322471161642996440906533187938298969649928516003704476137795166849228875L (Note: what does the L at the end of this integer mean in Python? Explain in your module docstring.)
-    * Write 3 test functions that verify whether this function outputs the correct results.  
-    * Make sure the function only returns a list. Have it throw an exception if a nonsensical argument ```n``` is given (i.e., not a positive integer).
-1. Write an executable python script ```fib.py``` that loads ```sequences.py``` as a module, reads one command line argument ```n```, runs ```fibonacci(n)```, then prints the last element of the result. Commit the script to GitHub.
-    * If an exception is thrown, catch it and print an appropriate error message to the screen. 
-    * Make sure you use the template to set up a proper ```main(argv)``` method called from inside a ```___main___``` environment. Your script should not execute any code if it is loaded as a module.
-    * Remember to make your script executable with ```chmod```. 
-    * Write a test function to verify that the main function operates as intended. 
-1. Write a bash script ```runfibs.sh``` that uses bash to run ```fib.py``` for arguments ```n``` from 1 to 10000.  For each argument, redirect the output of the script to a comma-separated-value file ```fibs.csv``` such that each fibonacci number is separated by a comma (with no newlines). Commit the shell script (but not the csv file) to GitHub.
-    * If a ```fibs.csv``` file already exists, back it up: move the existing file to ```fibs.csv.bak```, then create the new file. Inform the user that this backup occurred.
-    * If a backup already exists, inform the user, then exit the program with an error code (not 0) before any files are overwritten.
+1. With your group, work through the [IPython and Jupyter slides](http://slides.com/profdressel/jupyter-overview) carefully, to make sure everything is now familiar. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
+1. Have one group member create a new Jupyter notebook ```learnjupyter.ipynb``` and open it within SageCloud. Go through the interface tutorial in the Help menu, as well as the key shortcuts. Note that the keys follow vim conventions. Use the template notebook in the info repository as a guide for how to format your notebook properly as a group. You will use this notebook to present your results for the classwork in a neat, clear, and professional way.
+1. Create a new python module ```primes.py```. Inside this module create a function ```eratosthenes(n)```. This function will take a positive integer ```n``` and return all prime numbers smaller than ```n```. You should use the Sieve of Eratosthenes algorithm for computing these primes, which works as follows: First generate all positive integers less than ```n```, starting from the number 2. Then remove all multiples of 2. Then remove all multiples of the next largest remaining (prime) number. Then repeat the last step until you reach the largest remaining number. Finally, return the set of remaining (prime) numbers. Think carefully about which (basic) python data structure you want to use to implement this algorithm before you start coding.
+1. Create a test function ```test_primes()``` that checks the output of ```eratosthenes(n)``` to ensure that it is correct.
+1. Use a ```__main__``` section to make your python module executable as a script from the command line.
+1. In your notebook, import the ```primes``` module at the top, and add a new section called "The Sieve of Eratosthenes". In this section, describe what the goal of the algorithm is, and how it works, in your own words. Describe your design decisions. Which data structure(s) did you use and why? Use $\LaTeX$ code as needed to format math in a pretty way in the notebook. Finally, create a code cell in the section that demonstrates the correct execution of your code.
+1. In your primes module, create a new function ```gen_eratosthenes()``` that creates a generator for all the prime numbers. Rather than generating a fixed number as in the previous implementation, such a generator must produce one prime per iteration. Modify the algorithm to make this possible.
+1. In your notebook, add a new section called "Generating Prime Numbers" that describes and demonstrates your new generator. Explain your design decisions, and what is different compared to the previous implementation.
+1. In your notebook, add a new section called "Benchmarking Implementations". In this section, use the ```%time``` and ```%timeit``` magic commands to compare the efficiency of your implementations. Which is faster? By how much? Speculate about what is being slow about the slower implementation.
+1. After your notebook is complete, spell-checked, and formatted properly, add and commit it to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having one person from your group be the official notebook editor, and having others in your group write code for the python modules in parallel.
 
 
 ## Assessment
