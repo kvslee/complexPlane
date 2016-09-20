@@ -8,10 +8,12 @@
 
 ## Specification
 
+**Note: As of this assignment, we will be switching to use Python 3.**
+
 Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
 1. With your group, work through the [IPython and Jupyter slides](http://slides.com/profdressel/jupyter-overview) carefully, to make sure everything is now familiar. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
-1. Have one group member create a new Jupyter notebook ```cw04-primes.ipynb``` and open it within SageCloud. Go through the interface tutorial in the Help menu, as well as the key shortcuts. Note that the keys follow vim conventions. Use the template notebook in the info repository as a guide for how to format your notebook properly as a group. You will use this notebook to present your results for the classwork in a neat, clear, and professional way.
+1. Have one group member create a new Jupyter notebook ```cw04-primes.ipynb``` and open it within SageCloud. Go through the interface tutorial in the Help menu, as well as the key shortcuts. Note that the keys follow vim conventions. Use the template notebook in the info repository as a guide for how to format your notebook properly as a group. You will use this notebook to present your results for the classwork in a neat, clear, and professional way. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage.
 1. Create a new python module ```primes.py```. Inside this module create a function ```eratosthenes(n)```. This function will take a positive integer ```n``` and return all prime numbers smaller than ```n```. You should use the Sieve of Eratosthenes algorithm for computing these primes, which works as follows: First generate all positive integers less than ```n```, starting from the number 2. Then remove all multiples of 2. Then remove all multiples of the next largest remaining (prime) number. Then repeat the last step until you reach the largest remaining number. Finally, return the set of remaining (prime) numbers. Think carefully about which (basic) python data structure you want to use to implement this algorithm before you start coding.
 1. Create a test function ```test_primes()``` that checks the output of ```eratosthenes(n)``` to ensure that it is correct.
 1. Use a ```__main__``` section to make your python module executable as a script from the command line.
