@@ -2,26 +2,24 @@
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-04-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-04-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-05-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-05-YOURNAME)
 
-**Due date:** 2016/09/27
+**Due date:** 2016/10/04
 
 ## Specification
 
-**Note: As of this assignment, we will be switching to use Python 3.**
+**Note: Remember to use Python 3.**
 
 Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
-1. With your group, work through the [IPython and Jupyter slides](http://slides.com/profdressel/jupyter-overview) carefully, to make sure everything is now familiar. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
-1. Have one group member create a new Jupyter notebook ```cw04-primes.ipynb``` and open it within SageCloud. Go through the interface tutorial in the Help menu, as well as the key shortcuts. Note that the keys follow vim conventions. Use the template notebook in the info repository as a guide for how to format your notebook properly as a group. You will use this notebook to present your results for the classwork in a neat, clear, and professional way. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage.
-1. Create a new python module ```primes.py```. Be sure to use ```#!/usr/bin/env python3``` at the top to force use of Python 3. Inside this module create a function ```eratosthenes(n)```. This function will take a positive integer ```n``` and return all prime numbers smaller than ```n```. You should use the Sieve of Eratosthenes algorithm for computing these primes, which works as follows: First generate all positive integers less than ```n```, starting from the number 2. Then remove all multiples of 2. Then remove all multiples of the next largest remaining (prime) number. Then repeat the last step until you reach the largest remaining number. Finally, return the set of remaining (prime) numbers. Think carefully about which (basic) python data structure you want to use to implement this algorithm before you start coding.
-1. Create a test function ```test_primes()``` that checks the output of ```eratosthenes(n)``` to ensure that it is correct.
-1. Use a ```__main__``` section to make your python module executable as a script from the command line.
-1. In your notebook, import the ```primes``` module at the top, and add a new section called "The Sieve of Eratosthenes". In this section, describe what the goal of the algorithm is, and how it works, in your own words. Describe your design decisions. Which data structure(s) did you use and why? Use $\LaTeX$ code as needed to format math in a pretty way in the notebook. Finally, create a code cell in the section that demonstrates the correct execution of your code.
-1. In your primes module, create a new function ```gen_eratosthenes()``` that creates a generator for all the prime numbers. Rather than generating a fixed number as in the previous implementation, such a generator must produce one prime per iteration. Modify the algorithm to make this possible.
-1. In your notebook, add a new section called "Generating Prime Numbers" that describes and demonstrates your new generator. Explain your design decisions, and what is different compared to the previous implementation.
-1. In your notebook, add a new section called "Benchmarking Implementations". In this section, use the ```%time``` and ```%timeit``` magic commands to compare the efficiency of your implementations. Which is faster? By how much? Speculate about what is being slow about the slower implementation.
-1. After your notebook is complete, spell-checked, and formatted properly, add and commit it to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having one person from your group be the official notebook editor, and having others in your group write code for the python modules in parallel.
+1. With your **new** group of **two**, work through the [Python object slides](http://slides.com/profdressel/python-objects-overview) carefully. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
+1. Together, carefully read through this [Example docstring style guide](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) from Google. Google code may not be committed to the company repository without following this level of detail in docstrings. 
+    * Open a Jupyter notebook: ```critique.ipynb```
+    * Have one member of your group (the "reviewee") open the python code for their previous CW04. Have the other member (the "reviewer") constructively critique the code in a section of the Jupyter notebook. Use the following questions as a guideline: Is it clear how the code is organized? Is the code properly documented with both docstrings and supplementary comments according to industry standards? Can you follow the algorithm of the code, i.e., what it is doing, and how? Do you see any suggestions for how to improve the code? Discuss.
+    * Repeat this exercise, but swapping roles of "reviewee" and "reviewer". In industry, code is typically reviewed in this fashion by fellow employees at regular intervals, for quality assurance. You are always liable for anything you commit to a repository. Moreover, constructive criticism is key: do not demean your colleagues, dismiss their feedback, or engage in any behavior that could be construed as promoting a toxic environment.
+1. Create a python module ```cplane.py```. Import the module ```abscplane.py``` in the repository. Create a new class ```ComplexPlane``` that subclasses the abstract base class ```AbsComplexPlane```. Provide implementations for the requested methods. In particular, use a list of lists to represent the 2x2 grid needed to store the complex plane. Be sure to set all attributes properly during the ```__init__``` constuctor.
+1. In a Jupyter notebook ```cw05-cplane.ipynb``` provide a demonstration of how your class works. Include a discussion about what an abstract base class helps a programmer do, and why it might be useful even though it doesn't do anything by itself. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage.
+1. After your notebook is complete, spell-checked, and professionally formatted properly, add and commit it to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having one person from your group be the official notebook editor, and having others in your group write code for the python modules in parallel.
 
 
 ## Assessment
