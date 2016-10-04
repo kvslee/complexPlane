@@ -1,24 +1,31 @@
-# CS510 CW 5
+# CS510 CW 6
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-05-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-05-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-06-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-06-YOURNAME)
 
-**Due date:** 2016/10/04
+**Due date:** 2016/10/11
 
 ## Specification
 
 **Note: Remember to use Python 3.**
 
-Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```nosetests``` on every commit, indicating any failures via the Travis framework in the build status image above.
+Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```python -m "nose"``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
-1. With your **new** group of **two**, work through the [Python object slides](http://slides.com/profdressel/python-objects-overview) carefully. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
-1. Together, carefully read through this [Example docstring style guide](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) from Google. Google code may not be committed to the company repository without following this level of detail in docstrings. 
-    * Open a Jupyter notebook: ```critique.ipynb```
-    * Have one member of your group (the "reviewee") open the python code for their previous CW04. Have the other member (the "reviewer") constructively critique the code in a section of the Jupyter notebook. Use the following questions as a guideline: Is it clear how the code is organized? Is the code properly documented with both docstrings and supplementary comments according to industry standards? Can you follow the algorithm of the code, i.e., what it is doing, and how? Do you see any suggestions for how to improve the code? Discuss.
-    * Repeat this exercise, but swapping roles of "reviewee" and "reviewer", and record the critique in a new section of the notebook. In industry, code is typically reviewed in this fashion by fellow employees at regular intervals, for quality assurance. You are always liable for anything you commit to a repository. Moreover, constructive criticism is key: do not demean your colleagues, dismiss their feedback, or engage in any behavior that could be construed as promoting a toxic environment.
-1. Create a python module ```cplane.py```. Import the module ```abscplane.py``` in the repository. Create a new class ```ComplexPlane``` that subclasses the abstract base class ```AbsComplexPlane```. Provide implementations for the requested methods. In particular, use a list of lists to represent the 2D grid needed to store the complex plane. Be sure to set all attributes properly during the ```__init__``` constuctor.
-1. In a Jupyter notebook ```cw05-cplane.ipynb``` provide a demonstration of how your class works. Include a discussion about what an abstract base class helps a programmer do, and why it might be useful even though it doesn't do anything by itself. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage.
+1. Find another group: link each other your latest CW05, so that you can evaluate each other's code.  
+    * Open a Jupyter notebook: ```critique-YOURGROUP-THEIRGROUP.ipynb```
+    * Constructively critique their code in your Jupyter notebook. Use the following questions as a guideline: Is it clear how the code is organized? Is the code properly documented with both docstrings and supplementary comments according to industry standards? Can you follow the algorithm of the code, i.e., what it is doing, and how? Do you see any suggestions for how to improve the code? Discuss your critique with the members of the other group.
+    * Send each other your respective critiques. Commit both your critique and their critique to your repository.
+1. Work through the [Numpy/Pandas slides](http://slides.com/profdressel/numpy-and-pandas-overview) carefully. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
+1. Create a python module ```cplane-np.py```. Import the module ```abscplane.py``` in the repository. Create a new class ```ComplexPlaneNP``` that subclasses the abstract base class ```AbsComplexPlane```. Provide implementations for the requested methods using ```numpy``` arrays augmented with ```pandas``` labels. Be sure to set all attributes properly during the ```__init__``` constuctor.
+1. In a Jupyter notebook ```cw06-cplane-np.ipynb``` provide a demonstration of how your class works. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage. Include a detailed discussion comparing this implementation with your previous implementation using vanilla python lists.
+1. In your python module create a function ```julia(c, max=100)``` that takes a complex parameter ```c``` and an optional positive integer ```max```, and returns a function specified by the following: 
+    * The function should take one complex parameter ```z``` as an input, and return a positive integer ```n```.
+    * The returned integer ```n``` should count how many times the complex parameter ```z``` can be transformed as ```z = z**2 + c``` before the resulting magnitude ```|z|``` exceeds 2. 
+    * If the number ```max``` is reached before the magnitude of ```z``` exceeds 2, the function should return the number 0. 
+    * If the number ```z``` already has a magnitude larger than 2, the function should return 1.
+1. Explain in your notebook how to test whether your function ```julia``` is producing correct results. Write test functions for ```nose``` that verify that your implementation is correct.
+1. In your python module create a new class ```JuliaPlane``` that subclasses your new class ```ComplexPlaneNP```. Change the default function that transforms the plane to the output of ```julia``` with ```c = -1.037 + 0.17j```. Change the method ```set_f``` so that it only accepts a new complex parameter ```c``` and resets the default function to the output of ```julia``` with that ```c``` value instead. (Note that the transformed plane will now be a plane of positive integers.) Find a way to test that the resulting output is correct.
 1. After your notebooks are complete, spell-checked, and professionally formatted properly, add and commit them to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having only one person from your edit the notebooks at a time, being sure to pull all changes before you start editing yourself.
 
 
