@@ -25,7 +25,6 @@ Complete the following exercises, saving your solutions in the indicated files. 
     * If the number ```max``` is reached before the magnitude of ```z``` exceeds 2, the function should return the number 0. 
     * If the number ```z``` already has a magnitude larger than 2, the function should return 1.
 1. Explain in your notebook how to test whether your function ```julia``` is producing correct results. Write test functions for ```nose``` that verify that your implementation is correct.
-1. In your python module create a new class ```JuliaPlane``` that subclasses your new class ```ComplexPlaneNP```. Change the default function that transforms the plane to the output of ```julia``` with ```c = -1.037 + 0.17j```. Change the method ```set_f``` so that it only accepts a new complex parameter ```c``` and resets the default function to the output of ```julia``` with that ```c``` value instead. (Note that the transformed plane will now be a plane of positive integers.) Find a way to test that the resulting output is correct.
 1. After your notebooks are complete, spell-checked, and professionally formatted properly, add and commit them to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having only one person from your edit the notebooks at a time, being sure to pull all changes before you start editing yourself.
 
 
