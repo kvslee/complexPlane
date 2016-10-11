@@ -1,10 +1,10 @@
-# CS510 CW 6
+# CS510 CW 7
 
 **Author(s):** _\<your name(s)\>_
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-06-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-06-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-07-YOURNAME)
 
-**Due date:** 2016/10/11
+**Due date:** 2016/10/18
 
 ## Specification
 
@@ -12,20 +12,27 @@
 
 Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```python -m "nose"``` on every commit, indicating any failures via the Travis framework in the build status image above.
 
-1. Find another group: link each other your latest CW05, so that you can evaluate each other's code.  
-    * Open a Jupyter notebook: ```critique-YOURGROUP-THEIRGROUP.ipynb```
-    * Constructively critique their code in your Jupyter notebook. Use the following questions as a guideline: Is it clear how the code is organized? Is the code properly documented with both docstrings and supplementary comments according to industry standards? Can you follow the algorithm of the code, i.e., what it is doing, and how? Do you see any suggestions for how to improve the code? Discuss your critique with the members of the other group.
-    * Send each other your respective critiques. Commit both your critique and their critique to your repository.
-1. Work through the [Numpy/Pandas slides](http://slides.com/profdressel/numpy-and-pandas-overview) carefully. Be sure to use ```ipython3``` in a terminal to test how things work. Discuss amongst yourselves anything that is new or unclear.
-1. Create a python module ```cplane-np.py```. Import the module ```abscplane.py``` in the repository. Create a new class ```ComplexPlaneNP``` that subclasses the abstract base class ```AbsComplexPlane```. Provide implementations for the requested methods using ```numpy``` arrays augmented with ```pandas``` labels. Be sure to set all attributes properly during the ```__init__``` constuctor.
-1. In a Jupyter notebook ```cw06-cplane-np.ipynb``` provide a demonstration of how your class works. Be sure to switch the default kernel to Python 3 instead of the default Python 2 used by Sage. Include a detailed discussion comparing this implementation with your previous implementation using vanilla python lists.
-1. In your python module create a function ```julia(c, max=100)``` that takes a complex parameter ```c``` and an optional positive integer ```max```, and returns a function specified by the following: 
-    * The function should take one complex parameter ```z``` as an input, and return a positive integer ```n```.
-    * The returned integer ```n``` should count how many times the complex parameter ```z``` can be transformed as ```z = z**2 + c``` before the resulting magnitude ```|z|``` exceeds 2. 
-    * If the number ```max``` is reached before the magnitude of ```z``` exceeds 2, the function should return the number 0. 
-    * If the number ```z``` already has a magnitude larger than 2, the function should return 1.
-1. Explain in your notebook how to test whether your function ```julia``` is producing correct results. Write test functions for ```nose``` that verify that your implementation is correct.
-1. After your notebooks are complete, spell-checked, and professionally formatted properly, add and commit them to GitHub. Note that managing conflicts with Jupyter notebooks can be a pain, so I recommend having only one person from your edit the notebooks at a time, being sure to pull all changes before you start editing yourself.
+1. Take a look at the [Screenshot Gallery](http://matplotlib.org/users/screenshots.html) for ```matplotlib```, as well as the [matplotlib Gallery](http://matplotlib.org/gallery.html) to get a feel for what the most used plotting library in python can do. We will be barely scratching the surface of its functionality in this class, so keep these references handy for future use.
+1. Take a look at the [matplotlib Tutorial](http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html). It will be a useful reference for the rest of the classwork.
+1. Create a Jupyter notebook ```matplotlib-tutorial.ipynb``` that imports ```matplotlib.pyplot as plt```. Remember to include the magic line ```%matplotlib inline``` after you import it, so that plots are rendered correctly inside the notebook itself. Create a section "Simple plot" and work through the example in section 1.4.2 (Simple plot) of the tutorial. Make sure you understand how to draw curves, set styles of curves, set limits and ticks, set labels, set axis positions, create legends, create annotations, and tweak details. Keep in mind that the goal is to create publication-quality work. Your plots should be beautiful, but also informative. Be sure to code the solution yourself after thinking about it carefully and reading documentation - do not simply copy and paste the code.
+1. In the "Other types of plots" section of the tutorial, complete the following exercises. Note that the [matplotlib Documentation](http://matplotlib.org/api/pyplot_api.html) is extensive, but can be difficult to read. It is usually better to find [examples](http://matplotlib.org/examples/index.html) to see how to use graphics packages productively.
+    * Contour plot
+    * Imshow
+    * 3D Plots
+1. Copy your CW06 complex plane modules into CW07. Work with your partner to create a class ```JuliaPlane``` with the functionality of HW06 - use one of your homeworks as the starting code, and modify it as needed. In the new ```JuliaPlane``` class, create a new method ```show(self)``` that plots an image of the complex plane after it has been transformed by the julia function.
+    * Recall: it should be a plane of positive integers. Treat these numbers as grayscale values for ```imshow``` in ```matplotlib```.
+    * Hint: Use the colormap ```plt.cm.hot``` for nice results. Feel free to try other colormaps for fun.
+    * Hint: Try a ```bicubic``` interpolation to smooth out the plot a bit.
+    * Hint: Use the ```extent``` keyword to set the axes labels properly.
+    * Hint: Remember to put a plot label that indicates the chosen ```c``` value for the current ```JuliaPlane``` instance.
+1. Create a Jupyter notebook ```julia-sets.ipynb``` that imports your code for ```JuliaPlane```. Create and plot sets with the following ```c``` values. Try other ```c``` values to see what happens - comment on your findings.
+    * ```c = 0```
+    * ```c = -1```
+    * ```c = 0.3```
+    * ```c = -1.037 + 0.17j```
+    * ```c = -0.624 + 0.435j```
+    * ```c = -0.8 + 0.2j```
+    * ```c = -0.835 - 0.2321j```
 
 
 ## Assessment
