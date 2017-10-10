@@ -1,20 +1,14 @@
 # CS510 CW 7
 
-**Author(s):** _\<your name(s)\>_
+**Author(s):** **CHANGME**
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2016f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2016f/cw-07-YOURNAME)
-
-**Due date:** 2016/10/18
+[![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME)
 
 ## Specification
 
-**Note: Remember to use Python 3.**
-
-Complete the following exercises, saving your solutions in the indicated files. For Python files that include test functions, GitHub will automatically run your tests with ```python -m "nose"``` on every commit, indicating any failures via the Travis framework in the build status image above.
-
 1. Take a look at the [Screenshot Gallery](http://matplotlib.org/users/screenshots.html) for ```matplotlib```, as well as the [matplotlib Gallery](http://matplotlib.org/gallery.html) to get a feel for what the most used plotting library in python can do. We will be barely scratching the surface of its functionality in this class, so keep these references handy for future use.
 1. Take a look at the [matplotlib Tutorial](http://www.scipy-lectures.org/intro/matplotlib/matplotlib.html). It will be a useful reference for the rest of the classwork.
-1. Create a Jupyter notebook ```matplotlib-tutorial.ipynb``` that imports ```matplotlib.pyplot as plt```. Remember to include the magic line ```%matplotlib inline``` after you import it, so that plots are rendered correctly inside the notebook itself. Create a section "Simple plot" and work through the example in section 1.4.2 (Simple plot) of the tutorial. Make sure you understand how to draw curves, set styles of curves, set limits and ticks, set labels, set axis positions, create legends, create annotations, and tweak details. Keep in mind that the goal is to create publication-quality work. Your plots should be beautiful, but also informative. Be sure to code the solution yourself after thinking about it carefully and reading documentation - do not simply copy and paste the code.
+1. Create a Jupyter notebook ```matplotlib-tutorial.ipynb``` that imports ```matplotlib.pyplot as plt```. (It used to be necessary to include the magic line ```%matplotlib inline``` after you import matplotlib to render plots correctly inside the notebook itself, but this should no longer be needed.) Create a section "Simple plot" and work through the example in section 1.4.2 (Simple plot) of the tutorial. Make sure you understand how to draw curves, set styles of curves, set limits and ticks, set labels, set axis positions, create legends, create annotations, and tweak details. Keep in mind that the goal is to create publication-quality work. Your plots should be beautiful, but also informative. Be sure to code the solution yourself after thinking about it carefully and reading documentation - do not simply copy and paste the code.
 1. In the "Other types of plots" section of the tutorial, complete the following exercises. Note that the [matplotlib Documentation](http://matplotlib.org/api/pyplot_api.html) is extensive, but can be difficult to read. It is usually better to find [examples](http://matplotlib.org/examples/index.html) to see how to use graphics packages productively.
     * Contour plot
     * Imshow
