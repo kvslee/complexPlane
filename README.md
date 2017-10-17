@@ -1,8 +1,8 @@
 # CS510 CW 7
 
-**Author(s):** **CHANGME**
+**Author(s):** **Seong and Kynan**
 
-[![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME)
+[![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-07-seongandkynan.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-07-seongandkynan)
 
 ## Specification
 
@@ -33,7 +33,8 @@
 
 Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
 
-**CHANGEME**
+1. **Visualizing JuliaPlane is so fun. It is so beautiful and artistic.**
+1. **We see that there are patterns. They may present the rules of numbers, even though it is not easy to grasp them.**
 
 ## Honor Pledge
 
@@ -44,4 +45,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAME**
+**Seong and Kynan**
